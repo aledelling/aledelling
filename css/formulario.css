@@ -46,3 +46,36 @@ body{
 
 }
 
+/* Adaptación para pantallas móviles */
+@media screen and (max-width: 768px) {
+    .formulario {
+        width: 90%;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .contenido {
+        font-size: 22px;
+    }
+
+    .boton {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .formulario {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .contenido {
+        font-size: 20px;
+    }
+
+    .boton {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
