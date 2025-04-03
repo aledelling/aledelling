@@ -1,0 +1,605 @@
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                            ANDRES SANA PEÑA                                    */
+/*                            JHON ALEJANDRO DIAZ JIMENEZ                         */
+/*                            MAURICIO MARTINEZ                                   */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+/*FUENTE GOOGLE GLOBAL PARA TODA LA PAGINA*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Global*/
+*{
+    font-family: 'Chakra Petch', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                  GRID GRID GRID GRID GRID GRID GRID GRID                       */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+/* Media para grid en pantallas de escritorio (sin sidebar y sin carrusel) */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Solo una columna */
+        grid-template-rows: 100px 800px 100px; /* Ajustamos filas */
+
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+    }
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.2em;
+    min-height: 100%;
+}
+
+.grid-container > * {
+    box-shadow: -1 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    gap: 0px;
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                  HEADER HEADER HEADER HEADER HEADER HEADER                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+/*HEADER HEADER HEADER HEADER*/
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* El logo ocupa el espacio de la izquierda, el navbar a la derecha */
+    padding: 0 20px;
+    background-image: url('img/header.png');
+    background-size: 100% 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    animation: aparecerDesdeArriba 2s ease-out;
+}
+
+@keyframes aparecerDesdeArriba {
+    0% {
+        transform: translateY(-100px); /* Inicia 100px arriba de su posición */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Llega a su posición final */
+        opacity: 1;
+    }
+}
+
+/* LOGO LOGO LOGO */
+.logo {
+    display: flex;
+    align-items: flex-start; /* Asegura que el logo esté en la parte superior */
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde la izquierda */
+}
+
+.logo img {
+    height: 80px; /* Ajusta el tamaño del logo */
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                    NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alinea el navbar a la derecha */
+    gap: 30px;
+    border-radius: 10px;
+    margin-left: auto;
+    align-items: center ;
+    padding-bottom: 40px;
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease-in-out;
+}
+
+.navbar a:hover::before {
+    left: 100%;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    background-color: purple;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* CHECKBOX OCULTO */
+#menu-toggle {
+    display: none;
+}
+
+/* ICONO HAMBURGUESA */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* MENÚ EN MÓVILES */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu-toggle:checked ~ .navbar {
+        transform: translateX(0);
+    }
+}
+
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                    MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+.main {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    grid-template-rows: auto;
+    justify-items: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    
+    background-image: url('img/MAIN.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    min-height: 100vh; /* Se adapta al contenido */
+    padding: 20px;
+}
+
+/* Contenedor estilo tarjeta */
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Efecto de elevación */
+    
+    width: 90%;
+    max-width: 600px; /* Evita que sea demasiado ancho */
+    backdrop-filter: blur(10px); /* Efecto vidrio */
+}
+
+/* Estilo del título */
+.main h1 {
+    font-size: clamp(2rem, 6vw, 4rem); /* Ajuste dinámico de tamaño */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #fff;
+    animation: aparecer 1.5s ease-in-out;
+}
+
+/* Estilo del párrafo */
+.main p {
+    font-size: clamp(1rem, 4vw, 1.5rem); /* Ajuste dinámico */
+    max-width: 90%;
+    line-height: 1.8;
+    color: #ddd;
+    animation: aparecer 2s ease-in-out;
+}
+
+/* Contenedor del botón */
+.btn-container {
+    display: grid;
+    grid-column: 1 / -1; /* Ocupa toda la fila */
+    justify-content: center;
+}
+
+/* Estilo del botón */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Degradado llamativo */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 75, 43, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 75, 43, 0.6);
+}
+
+/* Efecto de presión */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔹 Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+    .main {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                   CARRUSEL CARUSEL CARRUSEL CARRUSEL CARRUSEL                  */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+.carrusel {
+    grid-area: carrusel;
+    width: 100%;
+    min-height: 500px;
+    padding: 300px 0;
+    margin: 0;
+    
+    /* Fondo que se sobrepondrá al main y aside */
+    background-image: url("img/CARRUSEL.png");
+    background-size: cover;
+    background-position: center;
+    
+    /* Centrado del contenido */
+    display: flex;
+    justify-content: center;
+    
+    /* Posicionamiento y z-index clave */
+    position: relative;
+    z-index: 9999; /* Capa superior al main y aside */
+}
+
+
+/* Estilo de cada slide (tarjeta) */
+.slide {
+    width: 450px; /* Reduje el ancho para dejar espacio al efecto "tarjeta" */
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative; /* Para posicionar el botón */
+    margin: 0 25px; /* Espacio entre tarjetas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra para efecto 3D */
+    transition: transform 0.3s; /* Efecto hover (opcional) */
+}
+
+/* Efecto hover para la tarjeta */
+.slide:hover {
+    transform: scale(1.05); /* Ligero zoom al pasar el mouse */
+}
+
+/* Botón "Agregar al carrito" */
+.btn-add {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    padding: 12px 30px;
+    background: #4CAF50; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.btn-add:hover {
+    background: purple; /* Efecto hover del botón */
+}
+
+
+
+.carrusel-container {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%; /* Cada slide ocupa el 100% del contenedor (500px) */
+    animation: desplazamiento 60s infinite linear; /* Velocidad ajustable */
+}
+
+
+/* Asignación de imágenes (desde CSS) */
+.slide-1 { background-image: url('img/GORRA 1.png'); }
+.slide-2 { background-image: url('img/GORRA 2.png'); }
+.slide-3 { background-image: url('img/GORRA 3.png'); }
+.slide-4 { background-image: url('img/GORRA 4.png'); }
+.slide-5 { background-image: url('img/GORRA 3.png'); }
+
+
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                      FOOTER FOOTER FOOTER FOOTER FOOTER                        */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 1000px;
+    padding: 100px 0 0;
+    background-image: url("img/FOTTER.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    animation: aparecerDesdeAbajo 3s ease-out;
+}
+
+.footer article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #8a2be2; /* Morado */
+    text-transform: uppercase;
+}
+
+.acerca {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff; /* Blanco */
+}
+
+.lk {
+    list-style: none;
+    padding: 0;
+}
+
+.lk li {
+    margin: 12px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #fff; /* Blanco */
+}
+
+.lk li a {
+    color: #d8b2ff; /* Morado claro */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lk li a:hover {
+    color: white;
+}
+
+.lk li i {
+    font-size: 1.6rem;
+    color: #d8b2ff; /* Morado claro */
+    transition: color 0.3s;
+}
+
+.lk li i:hover {
+    color: white;
+}
+
+/* Sección de derechos reservados */
+.certificado {
+    text-align: center;
+    font-size: 1rem;
+    padding: 15px 0;
+    color: white;
+    background: #4b0082; /* Morado oscuro */
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .footer article {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                    KFRAMES KFRAMES KFRAMES KFRAMES KFRAMES                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+
+@keyframes desplazamiento {
+    0% {
+        transform: translateX(0); 
+    }
+    0% {
+        transform: translateX(calc(-100% * 5));
+    }
+}
+
+@keyframes aparecerDesdeDerecha {
+    0% {
+        transform: translateX(100px); /* Inicia 100px fuera de la pantalla */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Llega a su posición final */
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerDesdeAbajo {
+    0% {
+        transform: translateY(100px); /* Inicia 100px por debajo de su posición */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Llega a su posición final */
+        opacity: 1;
+    }
+}
+
+
+@keyframes aparecerDesdeIzquierda {
+    0% {
+        transform: translateX(-100px); /* Inicia 100px a la izquierda */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Llega a su posición final */
+        opacity: 1;
+    }
+}
+

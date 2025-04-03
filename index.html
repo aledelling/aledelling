@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Establece la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Configuración de la vista para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>GORRAS</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="grid-container">
+    <!-- Inicio del contenedor principal de la página con grid -->
+
+    <!-- HEADER -->
+    <header class="header">
+        <!-- Contenedor del logo -->
+        <div class="logo">
+            <!-- Imagen del logo -->
+            <a href="index.html"><img src="css/img/LOGOTIPO_BLANCO.png" alt="Mi Logo"></a>
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Ícono del menú hamburguesa; al hacer clic, activa el checkbox -->
+        <label for="menu-toggle" class="menu-icon">☰</label>
+    
+        <!-- Navegación principal -->
+        <nav class="navbar">
+            <!-- Enlace a la página de inicio -->
+            <a href="index.html">INICIO</a>
+            <!-- Enlace a la sección del carrusel (Gorras) -->
+            <a href="categorias.html">GORRAS</a>
+            <!-- Enlace a la página de ropa -->
+            <a href="ropa.html">ROPA</a>
+            <!-- Enlace a la sección de contacto -->
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- ASIDE: Barra lateral -->
+    <aside class="sidebar">
+        <!-- Título del aside -->
+        <h2>TE PUEDE INTERESAR</h2>
+        <!-- Contenedor de enlaces en el aside -->
+        <div class="links">
+            <!-- Enlace a la sección "Quiénes Somos" -->
+            <a href="#contacto">QUIÉNES SOMOS</a>
+            <!-- Enlace a la página de gorras más vendidos -->
+            <a href="#carrusel">MÁS VENDIDOS</a>
+            <!-- Enlace a la página de categorías -->
+            <a href="categorias.html">CATEGORÍAS</a>
+        </div>
+    </aside>
+
+    <!-- MAIN: Contenido principal -->
+    <article class="main">
+        <!-- Imagen del logotipo principal -->
+        <img class="logotipo" src="css/img/LOGOTIPO SOMBRA.png" alt="">
+    </article>
+
+    <!-- CARRUSEL: Sección con slides -->
+    <article id="carrusel" class="carrusel">
+        <!-- Contenedor de los slides -->
+        <div class="carrusel-container">
+            <!-- Primer slide con botón para agregar al carrito -->
+            <div class="slide slide-1">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <!-- Segundo slide -->
+            <div class="slide slide-2">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <!-- Tercer slide -->
+            <div class="slide slide-3">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <!-- Cuarto slide -->
+            <div class="slide slide-4">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <!-- Quinto slide -->
+            <div class="slide slide-5">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            
+            <!-- Slides duplicados para crear efecto de carrusel infinito -->
+            <div class="slide slide-1">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <div class="slide slide-2">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <div class="slide slide-3">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <div class="slide slide-4">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+            <div class="slide slide-5">
+                <button class="btn-add">Agregar al carrito</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- FOOTER: Pie de página -->
+    <footer id="contacto" class="footer">
+        <!-- Contenedor de artículos dentro del footer -->
+        <article>
+            <!-- Primer bloque del footer -->
+            <div class="box">
+                <!-- Título o nombre de la marca -->
+                <h1>TECHOS STYLE</h1>
+                <!-- Descripción o "acerca de" la marca -->
+                <div class="acerca">
+                    "Gorras con diseños exclusivos y de calidad, ideales para los que buscan comodidad y estilo en su día a día. Perfectas para el público amateur que quiere lucir bien sin perder la funcionalidad."
+                </div>
+            </div>
+            <!-- Segundo bloque del footer con enlaces de acceso -->
+            <div class="box">
+                <!-- Título del bloque -->
+                <h1 class="links">links de Acceso</h1>
+                <!-- Lista de enlaces -->
+                <ul class="lk">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#gorras">Gorras</a></li>
+                    <li><a href="./formulario.html">Contactanos</a></li>
+                </ul>
+            </div>
+            <!-- Tercer bloque del footer con redes sociales -->
+            <div class="box">
+                <!-- Título del bloque -->
+                <h1 class="links">Redes Sociales</h1>
+                <!-- Lista de redes sociales -->
+                <ul class="lk">
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+                    <li><a href="https://whatsapp.com">Whatsapp</a></li>
+                </ul>
+            </div>         
+        </article>
+        <!-- Mensaje de derechos de autor -->
+        <p class="certificado">Todo Derecho Reservado al copyrigth 2025 - TECHOS STLYLE</p>
+    </footer>
+</body>
+</html>

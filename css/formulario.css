@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: verdana;
+    color: white;   
+
+}
+body{
+    background-image: url(img/MAIN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.formulario{
+    width: 600px;
+    background: #210F37;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 7px 13px 37px #000;
+
+}
+.formulario h1{
+    margin-bottom: 20px;
+
+}
+.contenido{
+    width: 100%;
+    background: #F5EEDC;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #27548A;
+    font-size: 28px;
+
+}
+.boton{
+    width: 100%;
+    border: none;
+    background: #4F1C51;
+    padding: 12px;
+    color: red;
+    margin: 16px 0;
+    font-size: 16px;
+    box-shadow: 5px 8px 10px #000;
+
+}
+

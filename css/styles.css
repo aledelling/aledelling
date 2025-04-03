@@ -1,0 +1,826 @@
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                            ANDRES SANA PEÑA                                    */
+/*                            JHON ALEJANDRO DIAZ JIMENEZ                         */
+/*                            MAURICIO MARTINEZ                                   */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+/*FUENTE GOOGLE GLOBAL PARA TODA LA PAGINA*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Global*/
+*{
+    font-family: 'Chakra Petch', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                  GRID GRID GRID GRID GRID GRID GRID GRID                       */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+/* 
+  Definición de la clase "grid-container" para establecer un layout basado en Grid.
+  Este contenedor se usará para estructurar la página en áreas (header, sidebar, main, carrusel, footer).
+*/
+.grid-container {
+    display: grid; /* Activa CSS Grid Layout */
+    gap: 10px; /* Espacio de 10px entre las celdas de la cuadrícula */
+    grid-template-areas:  /* Define las áreas de la cuadrícula para móviles o pantallas pequeñas */
+    "header"    /* Primera fila: área "header" */
+    "sidebar"   /* Segunda fila: área "sidebar" */
+    "main"      /* Tercera fila: área "main" */
+    "carrusel"  /* Cuarta fila: área "carrusel" */
+    "footer"    /* Quinta fila: área "footer" */
+    ;
+}
+
+/* 
+  Media query para pantallas de escritorio (ancho mínimo de 1024px).
+  Se redefine la estructura del grid para aprovechar mejor el espacio en pantallas grandes.
+*/
+@media (min-width: 1024px) {
+    .grid-container{
+        grid-template-columns: 500px auto; /* Dos columnas: la primera de 500px y la segunda que ocupa el resto del espacio */
+        grid-template-rows: 100px 800px 1000px 800px; /* Define 4 filas con alturas específicas */
+
+        grid-template-areas:  /* Redefine las áreas del grid para pantallas grandes */
+        "header header"    /* Primera fila: el header se extiende a lo largo de ambas columnas */
+        "sidebar main"     /* Segunda fila: sidebar en la primera columna y main en la segunda */
+        "carrusel carrusel"/* Tercera fila: el carrusel ocupa ambas columnas */
+        "footer footer"    /* Cuarta fila: el footer ocupa ambas columnas */
+        ;
+    }
+}
+
+/* 
+  Estilos globales para la etiqueta <html>.
+  Se establece la altura al 100% y un comportamiento suave para el scroll.
+*/
+html{
+    height: 100%; /* La altura del elemento html es del 100% de la ventana */
+    scroll-behavior: smooth; /* El scroll se realizará de forma suave */
+}
+
+/* 
+  Estilos globales para la etiqueta <body>.
+  Se define un tamaño de fuente base y una altura mínima para que cubra la ventana.
+*/
+body {
+    font-size: 1.2em; /* Tamaño base de fuente, 1.2 veces el tamaño del font-size por defecto */
+    min-height: 100%; /* La altura mínima del body es del 100% de la ventana */
+}
+
+/* 
+  Estilos aplicados a TODOS los elementos hijos directos de .grid-container.
+  Se aplican sombras, bordes redondeados, padding y alineación centrada al texto.
+*/
+.grid-container > * {
+    box-shadow: -1 1px 7px 0px rgba(0, 0, 0, 0.75); /* Sombra alrededor de cada elemento hijo */
+    border-radius: 4px; /* Bordes redondeados de 4px */
+    padding: 10px; /* Relleno interno de 10px */
+    text-align: center; /* Centra el texto dentro de cada elemento */
+}
+
+/* 
+  Se vuelve a definir .grid-container.
+  En este caso se establece el display como grid y se elimina el gap (0px) para este bloque.
+  IMPORTANTE: Esta declaración sobrescribe la anterior para .grid-container,
+  por lo que se recomienda revisar cuál es la intención final.
+*/
+.grid-container {
+    display: grid; /* Activa el layout de grid */
+    gap: 0px; /* Elimina cualquier espacio entre las celdas */
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                  HEADER HEADER HEADER HEADER HEADER HEADER                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+
+/* 
+  Estilos para el header de la página.
+  Se utiliza CSS Grid para distribuir el logo y el navbar en dos columnas.
+*/
+.header {
+    display: grid; /* Activa el layout de grid */
+    grid-template-columns: 1fr auto; /* La primera columna ocupa el espacio restante y la segunda se ajusta automáticamente (usada para el navbar) */
+    padding: 0 20px; /* Espaciado horizontal de 20px en ambos lados */
+    background-image: url('img/header.png'); /* Imagen de fondo para el header */
+    background-size: 100% 200px; /* Ajusta el tamaño de la imagen: 100% del ancho y 200px de alto */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    width: 100%; /* El header ocupa todo el ancho de la pantalla */
+    height: 150px; /* Altura fija de 150px para el header */
+    position: fixed; /* Posiciona el header de forma fija en la pantalla */
+    top: 0; /* Fija el header en la parte superior de la ventana */
+    left: 0; /* Fija el header al inicio del eje horizontal */
+    z-index: 10000; /* Coloca el header por encima de otros elementos */
+    
+    animation: aparecerDesdeArriba 2s ease-out; /* Aplica una animación de aparición desde arriba durante 2 segundos */
+}
+
+/* 
+  Animación para hacer que el header aparezca desde arriba.
+  La animación cambia la posición vertical y la opacidad.
+*/
+@keyframes aparecerDesdeArriba {
+    0% {
+        transform: translateY(-100px); /* Inicia 100px arriba de su posición final */
+        opacity: 0; /* Comienza completamente transparente */
+    }
+    100% {
+        transform: translateY(0); /* Finaliza en su posición original */
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+
+/* 
+  Estilos para el contenedor del logo.
+  Se usa flexbox para alinear el logo en la parte superior.
+*/
+.logo {
+    display: flex; /* Activa Flexbox para el alineamiento del contenido */
+    align-items: flex-start; /* Alinea los elementos (logo) al inicio de la línea (parte superior) */
+    position: absolute; /* Posiciona el logo de forma absoluta dentro del header */
+    top: 10px; /* Separa el logo 10px desde la parte superior */
+    left: 20px; /* Separa el logo 20px desde la izquierda */
+}
+
+/* 
+  Estilos para la imagen dentro del contenedor .logo.
+*/
+.logo img {
+    height: 80px; /* Define la altura de la imagen del logo a 80px */
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                    NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+/* 
+  Estilos para el contenedor de navegación (navbar)
+  Se utiliza Flexbox para alinear los enlaces a la derecha
+*/
+.navbar {
+    display: flex; /* Activa Flexbox */
+    justify-content: flex-end; /* Alinea el contenido al final (derecha) */
+    gap: 30px; /* Espacio de 30px entre cada enlace */
+    border-radius: 10px; /* Bordes redondeados en el contenedor */
+    margin-left: auto; /* Empuja el navbar hacia la derecha */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding-bottom: 40px; /* Espaciado inferior de 40px */
+}
+
+/* 
+  Estilos para los enlaces dentro del navbar
+  Se define el aspecto básico de cada enlace
+*/
+.navbar a {
+    display: inline-block; /* Permite aplicar padding y margen sin afectar el flujo del texto */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    font-size: 18px; /* Tamaño de fuente de 18px */
+    color: white; /* Color del texto blanco */
+    background-color: black; /* Fondo negro para el enlace */
+    padding: 8px 15px; /* Relleno interno: 8px vertical, 15px horizontal */
+    border-radius: 5px; /* Bordes redondeados de 5px */
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3); /* Sombra ligera alrededor del enlace */
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves para fondo, transformación y sombra */
+    position: relative; /* Posicionamiento relativo para permitir pseudo-elementos */
+    overflow: hidden; /* Oculta contenido que se salga del contenedor, útil para efectos hover */
+}
+
+/* 
+  Pseudo-elemento ::before para crear un efecto de "deslizamiento" sobre el enlace.
+  Inicialmente se posiciona fuera del área visible y se mueve al pasar el ratón.
+*/
+.navbar a::before {
+    content: ""; /* Crea un elemento vacío */
+    position: absolute; /* Posicionamiento absoluto respecto al enlace */
+    top: 0; /* Se ubica en la parte superior */
+    left: -100%; /* Inicia completamente fuera a la izquierda */
+    width: 100%; /* Ocupa el ancho completo del enlace */
+    height: 100%; /* Ocupa el alto completo del enlace */
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent); /* Degradado para efecto visual */
+    transition: left 0.5s ease-in-out; /* Transición suave para mover el pseudo-elemento */
+}
+
+/* 
+  Al pasar el ratón sobre el enlace, el pseudo-elemento se desplaza hacia la derecha
+  creando un efecto de "destello" o "resplandor".
+*/
+.navbar a:hover::before {
+    left: 100%; /* El pseudo-elemento se mueve completamente hacia la derecha */
+}
+
+/* 
+  Efecto hover en el enlace para aumentar su tamaño, cambiar el color de fondo y ajustar la sombra.
+*/
+.navbar a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del enlace en un 10% */
+    background-color: purple; /* Cambia el fondo a púrpura */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra más pronunciada */
+}
+
+/* 
+  Estilos para el checkbox oculto que controla el menú hamburguesa.
+  Se utiliza para mostrar/ocultar el menú en dispositivos móviles.
+*/
+#menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+/* 
+  Estilos para el ícono de menú hamburguesa.
+  Este ícono se muestra solo en dispositivos móviles y permite activar el menú.
+*/
+.menu-icon {
+    display: none; /* Oculto por defecto, se mostrará en el media query */
+    font-size: 30px; /* Tamaño de fuente grande para el ícono */
+    color: white; /* Color blanco para el ícono */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar el ratón */
+    position: absolute; /* Posicionamiento absoluto para situarlo en la parte superior derecha */
+    top: 10px; /* Separado 10px desde la parte superior */
+    right: 20px; /* Separado 20px desde la derecha */
+}
+
+/* 
+  Media query para dispositivos móviles (ancho máximo de 768px)
+  Ajusta el layout y la visibilidad de los elementos para pantallas pequeñas.
+*/
+@media (max-width: 768px) {
+    /* Ajustes en el header para móviles */
+    .header {
+        grid-template-columns: 1fr auto; /* Mantiene dos columnas: una para el logo y otra para el ícono del menú */
+    }
+
+    /* 
+      Ajusta el navbar para dispositivos móviles.
+      Se transforma en un menú vertical, posicionado de forma absoluta.
+    */
+    .navbar {
+        display: flex; /* Mantiene el uso de Flexbox */
+        flex-direction: column; /* Organiza los enlaces en columna */
+        position: absolute; /* Posiciona el menú de manera absoluta respecto al header */
+        top: 100%; /* Coloca el menú justo debajo del header */
+        right: 0; /* Alinea el menú a la derecha */
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para el menú */
+        width: 200px; /* Ancho fijo del menú */
+        padding: 10px; /* Relleno interno */
+        border-radius: 10px; /* Bordes redondeados */
+        transform: translateX(100%); /* Inicialmente, el menú se desplaza fuera de la vista hacia la derecha */
+        transition: transform 0.3s ease-in-out; /* Transición suave para mostrar/ocultar el menú */
+    }
+
+    /* 
+      Ajusta los enlaces dentro del navbar en dispositivos móviles.
+      Se muestran como bloques para ocupar todo el ancho del menú.
+    */
+    .navbar a {
+        display: block; /* Cada enlace ocupa una línea completa */
+        padding: 10px; /* Relleno interno para mayor área de clic */
+        text-align: center; /* Centra el texto en cada enlace */
+    }
+
+    /* Muestra el ícono de menú hamburguesa en dispositivos móviles */
+    .menu-icon {
+        display: block; /* Hace visible el ícono */
+    }
+
+    /* 
+      Cuando el checkbox #menu-toggle está marcado, se elimina la transformación
+      para mostrar el menú (se desplaza a su posición original).
+    */
+    #menu-toggle:checked ~ .navbar {
+        transform: translateX(0); /* El menú se desliza a la vista */
+    }
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                  ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+/* 
+  Estilos para el contenedor lateral (sidebar)
+  Se asigna la área "sidebar" del grid, se establece un fondo con imagen y se centra el contenido.
+*/
+.sidebar {
+    grid-area: sidebar; /* Asigna esta sección al área "sidebar" del grid definido en el contenedor principal */
+    background-image: url('img/ASIDE 1.png'); /* Imagen de fondo para el sidebar */
+    background-size: 100% 900px; /* La imagen se ajusta al 100% del ancho y 900px de alto */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    display: flex; /* Activa Flexbox para alinear el contenido */
+    flex-direction: column; /* Organiza los elementos de manera vertical */
+    justify-content: center; /* Centra verticalmente los elementos */
+    align-items: center; /* Centra horizontalmente los elementos */
+    height: 900px; /* Define una altura fija para el sidebar */
+    animation: aparecerDesdeIzquierda 3s ease-out; /* Aplica una animación para que aparezca desde la izquierda en 3 segundos */
+    position: relative; /* Posicionamiento relativo para poder posicionar elementos hijos de forma absoluta (por ejemplo, el h2) */
+    padding-left: 20px; /* Espacio interno a la izquierda */
+}
+
+/* 
+  Estilos para el título h2 dentro del sidebar
+  Se posiciona de manera absoluta para tener mayor control sobre su ubicación.
+*/
+.sidebar h2 {
+    font-size: 32px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Fuente en negrita */
+    color: white; /* Color del texto en blanco */
+    position: absolute; /* Posicionamiento absoluto dentro del sidebar */
+    top: 60px; /* Posiciona el título a 60px desde la parte superior */
+    left: 20px; /* Posiciona el título a 20px desde la izquierda */
+}
+
+/* 
+  Estilos para el contenedor de enlaces dentro del sidebar.
+  Se organiza en columna y se separan los enlaces mediante un gap.
+*/
+.sidebar .links {
+    display: flex; /* Activa Flexbox para el contenedor de enlaces */
+    flex-direction: column; /* Organiza los enlaces en columna */
+    gap: 30px; /* Espaciado de 30px entre cada enlace */
+    align-items: center; /* Centra los enlaces horizontalmente */
+    margin-top: 150px; /* Margen superior para separar los enlaces del título u otros elementos */
+}
+
+/* 
+  Estilos para los enlaces (<a>) dentro del sidebar.
+  Se define su tamaño, fondo, tipografía y efectos visuales.
+*/
+.sidebar a {
+    display: flex; /* Activa Flexbox para centrar el contenido interno del enlace */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 400px; /* Ancho fijo para el enlace */
+    height: 150px; /* Altura fija para el enlace */
+    background-image: url('img/BOTON.png'); /* Imagen de fondo para el botón/enlace */
+    background-size: cover; /* La imagen cubre todo el espacio disponible */
+    background-repeat: no-repeat; /* No se repite la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    color: white; /* Color del texto en blanco */
+    font-size: 30px; /* Tamaño de fuente de 30px */
+    text-align: center; /* Alinea el texto al centro */
+    text-decoration: none; /* Elimina subrayado en los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    padding-bottom: 20px; /* Espacio inferior interno para ajustar la posición del texto */
+    position: relative; /* Posicionamiento relativo para poder usar pseudo-elementos */
+    overflow: hidden; /* Oculta el contenido que se desborde, útil para efectos hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para transformación y sombra al interactuar */
+}
+
+/* 
+  Pseudo-elemento ::before para crear un efecto visual adicional en los enlaces.
+  Este elemento se mueve al pasar el mouse, generando un efecto de deslizamiento y resplandor.
+*/
+.sidebar a::before {
+    content: ""; /* Crea un elemento vacío */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta respecto al enlace */
+    top: 0; /* Lo posiciona en la parte superior del enlace */
+    left: -100%; /* Inicia completamente fuera del área visible a la izquierda */
+    width: 100%; /* Ocupa el 100% del ancho del enlace */
+    height: 100%; /* Ocupa el 100% del alto del enlace */
+    background: rgba(255, 255, 255, 0.2); /* Fondo translúcido blanco para el efecto de resplandor */
+    transform: skewX(-30deg); /* Aplica una inclinación para darle dinamismo al efecto */
+    transition: left 0.5s ease-in-out; /* Transición suave para el movimiento del pseudo-elemento */
+}
+
+/* 
+  Efecto hover en el enlace: al pasar el mouse, se aplica una transformación y se activa el efecto del pseudo-elemento.
+*/
+.sidebar a:hover {
+    transform: scale(1.05); /* Escala el enlace al 105% para dar efecto de agrandamiento */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Aplica una sombra que simula un brillo sutil */
+}
+
+/* 
+  Al pasar el mouse sobre el enlace, el pseudo-elemento ::before se desplaza a la derecha,
+  activando el efecto visual de deslizamiento.
+*/
+.sidebar a:hover::before {
+    left: 100%; /* El pseudo-elemento se mueve completamente a la derecha */
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                    MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+
+/* 
+  Estilos para el contenedor principal "main"
+  Este contenedor se posiciona en el área "main" del grid y utiliza una imagen de fondo.
+*/
+.main {
+    grid-area: main; /* Asigna esta sección al área "main" definida en el grid */
+    background-image: url('img/MAIN.png'); /* Establece la imagen de fondo */
+    background-size: 100% 900px; /* Ajusta la imagen al 100% del ancho y 900px de alto */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+    display: flex; /* Activa Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 900px; /* Define una altura fija de 900px para el contenedor */
+    width: 100%; /* El contenedor ocupa el 100% del ancho */
+    animation: aparecerDesdeArriba 4s ease-out; /* Aplica la animación "aparecerDesdeArriba" durante 4s con easing "ease-out" */
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta dentro de "main" */
+    z-index: 1; /* Define la prioridad en el apilamiento para superponer otros elementos si es necesario */
+}
+
+/* 
+  Estilos para la imagen con clase "logotipo"
+  Se limita el tamaño máximo y se aplican animaciones y transiciones para efectos visuales.
+*/
+.logotipo {
+    max-width: 90%; /* El ancho máximo de la imagen es el 90% del contenedor */
+    max-height: 80%; /* La altura máxima de la imagen es el 80% del contenedor */
+    object-fit: contain; /* La imagen se escala para caber en el contenedor sin recortarse */
+    
+    /* Se aplican dos animaciones:
+       - "aparecerDesdeDerecha" durante 5s con easing "ease-out"
+       - "movimiento3D" que se ejecuta de forma infinita en modo alternado, con duración de 18s y easing "ease-in-out" */
+    animation: aparecerDesdeDerecha 5s ease-out, movimiento3D 18s infinite alternate ease-in-out;
+    
+    /* Efectos de transición para transformaciones, sombras y filtros */
+    transition: transform 0.5s ease-in-out, 
+                box-shadow 0.3s ease-in-out, 
+                filter 0.3s ease-in-out;
+}
+
+/* 
+  Efecto hover para la imagen "logotipo"
+  Al pasar el ratón, se aplica una transformación 3D, se aumenta la escala, se añade sombra y se ajusta el brillo.
+*/
+.logotipo:hover {
+    transform: perspective(500px) rotateY(15deg) scale(1.05); /* Aplica una perspectiva, rota en el eje Y 15° y escala al 105% */
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5); /* Agrega una sombra blanca semitransparente */
+    filter: brightness(1.2); /* Aumenta el brillo de la imagen */
+}
+
+/* 
+  Animación "movimiento3D" para la imagen "logotipo"
+  Crea un efecto de oscilación en el eje Y con perspectiva.
+*/
+@keyframes movimiento3D {
+    0% { transform: perspective(500px) rotateY(8deg); } /* Comienza con una rotación de 8° en el eje Y */
+    50% { transform: perspective(500px) rotateY(-8deg); } /* En el punto medio, rota -8° en el eje Y */
+    100% { transform: perspective(500px) rotateY(8deg); } /* Termina volviendo a 8° en el eje Y */
+}
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                   CARRUSEL CARUSEL CARRUSEL CARRUSEL CARRUSEL                  */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/* 
+  Estilos para el contenedor del carrusel.
+  Este contenedor ocupa la zona asignada al carrusel en el grid y muestra una imagen de fondo.
+*/
+.carrusel {
+    grid-area: carrusel; /* Asigna el carrusel al área definida en el grid */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    min-height: 500px; /* Altura mínima de 500px */
+    padding: 300px 0; /* Espaciado vertical de 300px arriba y abajo, sin padding horizontal */
+    margin: 0; /* Elimina cualquier margen externo */
+
+    /* Fondo para el carrusel, que se sobrepone al main y aside */
+    background-image: url("img/CARRUSEL.png"); /* Define la imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor sin distorsionarse */
+    background-position: center; /* Centra la imagen de fondo */
+    
+    /* Centrado del contenido interno */
+    display: flex; /* Activa Flexbox para centrar los elementos hijos */
+    justify-content: center; /* Centra horizontalmente el contenido */
+
+    /* Posicionamiento y z-index para superponer el carrusel sobre otros elementos */
+    position: relative; /* Posiciona el carrusel de forma relativa para que sus hijos puedan posicionarse de forma absoluta */
+    z-index: 9999; /* Coloca el carrusel en la capa superior, por encima de main y aside */
+}
+
+/* 
+  Estilos para cada slide (tarjeta) dentro del carrusel.
+  Cada slide se muestra como una tarjeta con fondo, sombra y efectos.
+*/
+.slide {
+    width: 450px; /* Ancho de la tarjeta: 450px */
+    height: 450px; /* Altura de la tarjeta: 450px */
+    background-size: cover; /* La imagen de fondo cubrirá toda la tarjeta */
+    background-position: center; /* Centra la imagen de fondo */
+    border-radius: 15px; /* Bordes redondeados con radio de 15px */
+    position: relative; /* Posiciona el slide de forma relativa para posicionar elementos internos (como el botón) */
+    margin: 0 25px; /* Margen horizontal de 25px entre tarjetas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra para generar un efecto 3D */
+    transition: transform 0.3s; /* Transición suave para transformaciones, por ejemplo en hover */
+}
+
+/* 
+  Efecto hover para cada slide.
+  Al pasar el cursor, se aplica un leve zoom a la tarjeta.
+*/
+.slide:hover {
+    transform: scale(1.05); /* Aumenta ligeramente la escala (105%) al hacer hover */
+}
+
+/* 
+  Estilos para el botón "Agregar al carrito" dentro de cada slide.
+  Se posiciona de manera absoluta para aparecer en la parte inferior central.
+*/
+.btn-add {
+    position: absolute; /* Posiciona el botón de forma absoluta respecto al slide */
+    bottom: 20px; /* Lo coloca a 20px desde la parte inferior del slide */
+    left: 50%; /* Posiciona el botón en el centro horizontal */
+    transform: translateX(-50%); /* Ajusta el botón para que quede perfectamente centrado */
+    padding: 12px 30px; /* Relleno interno: 12px vertical y 30px horizontal */
+    background: purple; /* Color de fondo verde */
+    color: white; /* Texto en color blanco */
+    border: none; /* Sin bordes */
+    border-radius: 25px; /* Bordes redondeados con un radio de 25px */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar el ratón */
+    transition: background 0.5s; /* Transición suave para cambios en el fondo */
+}
+
+/* 
+  Efecto hover para el botón "Agregar al carrito".
+  Cambia el color de fondo al pasar el cursor.
+*/
+.btn-add:hover {
+    background: purple; /* Cambia el fondo a púrpura en hover */
+}
+
+/* 
+  Contenedor del carrusel que agrupa todos los slides.
+  Se utiliza grid para organizar los slides en una secuencia horizontal.
+*/
+.carrusel-container {
+    width: 500px; /* Ancho del contenedor del carrusel */
+    height: 500px; /* Altura del contenedor del carrusel */
+    display: grid; /* Activa CSS Grid */
+    grid-auto-flow: column; /* Coloca los elementos en columnas automáticamente */
+    grid-auto-columns: 100%; /* Cada slide ocupa el 100% del ancho del contenedor (500px) */
+    animation: desplazamiento 60s infinite linear; /* Animación que desplaza los slides continuamente en 60s, de forma infinita y lineal */
+}
+
+/* 
+  Asignación de imágenes de fondo para cada slide mediante clases específicas.
+  Estas clases definen la imagen de fondo para cada tarjeta.
+*/
+.slide-1 { 
+    background-image: url('img/GORRA 1.png'); /* Imagen para el slide 1 */
+}
+.slide-2 { 
+    background-image: url('img/GORRA 2.png'); /* Imagen para el slide 2 */
+}
+.slide-3 { 
+    background-image: url('img/GORRA 3.png'); /* Imagen para el slide 3 */
+}
+.slide-4 { 
+    background-image: url('img/GORRA 4.png'); /* Imagen para el slide 4 */
+}
+.slide-5 { 
+    background-image: url('img/GORRA 3.png'); /* Imagen para el slide 5, en este caso se reutiliza la de slide 3 */
+}
+
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                      FOOTER FOOTER FOOTER FOOTER FOOTER                        */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/* 
+  Estilos para el contenedor del footer, que ocupa el área asignada al footer en el grid.
+  Se le aplica una imagen de fondo y animación para que aparezca desde abajo.
+*/
+.footer {
+    grid-area: footer; /* Asigna este elemento al área "footer" del grid */
+    width: 100%; /* Ocupa el 100% del ancho de la ventana */
+    height: 1000px; /* Altura fija de 1000px */
+    padding: 100px 0 0; /* Padding superior de 100px, sin padding en laterales ni inferior */
+    background-image: url("img/FOTTER.png"); /* Imagen de fondo para el footer */
+    background-size: cover; /* La imagen cubrirá todo el contenedor sin distorsionarse */
+    background-position: center; /* Centra la imagen de fondo */
+    display: flex; /* Activa Flexbox para organizar los elementos internos */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta si es necesario */
+    z-index: 9999; /* Asegura que el footer se muestre por encima de otros elementos */
+    animation: aparecerDesdeAbajo 3s ease-out; /* Aplica la animación para que aparezca desde abajo en 3s */
+}
+
+/* 
+  Estilos para el artículo dentro del footer.
+  Se utiliza CSS Grid para distribuir el contenido en columnas responsivas.
+*/
+.footer article {
+    display: grid; /* Activa CSS Grid Layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      /* Crea columnas que se ajustan automáticamente: mínimo 250px y máximo 1fr */
+    gap: 40px; /* Espaciado de 40px entre las columnas */
+    width: 90%; /* Ocupa el 90% del ancho del contenedor */
+    max-width: 1200px; /* Ancho máximo de 1200px */
+    margin: auto; /* Centra el artículo horizontalmente */
+    text-align: center; /* Centra el texto dentro de cada celda */
+    padding-bottom: 40px; /* Espaciado inferior de 40px */
+}
+
+/* 
+  Estilos para los encabezados (h1) dentro de cada caja del footer.
+  Define el tamaño, color y transformación de texto.
+*/
+.box h1 {
+    font-size: 1.8rem; /* Tamaño de fuente de 1.8rem */
+    margin-bottom: 15px; /* Margen inferior de 15px */
+    color: #8a2be2; /* Color morado para el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+/* 
+  Estilos para la sección "acerca" dentro del footer.
+  Define tamaño de fuente, interlineado y color del texto.
+*/
+.acerca {
+    font-size: 1.1rem; /* Tamaño de fuente de 1.1rem */
+    line-height: 1.6; /* Interlineado de 1.6 */
+    color: #fff; /* Color del texto en blanco */
+}
+
+/* 
+  Estilos para la lista de enlaces (.lk) en el footer.
+  Se eliminan los estilos por defecto de listas.
+*/
+.lk {
+    list-style: none; /* Elimina los puntos o viñetas de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+/* 
+  Estilos para cada elemento de la lista (.lk li) en el footer.
+  Se centran los elementos y se establece un margen vertical.
+*/
+.lk li {
+    margin: 12px 0; /* Margen vertical de 12px entre cada elemento */
+    font-size: 1.1rem; /* Tamaño de fuente de 1.1rem */
+    display: flex; /* Utiliza Flexbox para alinear contenido interno */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    gap: 12px; /* Espacio de 12px entre elementos internos (por ejemplo, íconos y texto) */
+    color: #fff; /* Color del texto en blanco */
+}
+
+/* 
+  Estilos para los enlaces (<a>) dentro de los elementos de la lista.
+  Define color, decoraciones, transiciones y alineación.
+*/
+.lk li a {
+    color: #d8b2ff; /* Color morado claro para el enlace */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+    font-weight: bold; /* Fuente en negrita */
+    display: flex; /* Activa Flexbox para alinear posibles íconos y texto */
+    align-items: center; /* Alinea verticalmente los elementos hijos */
+    gap: 10px; /* Espacio de 10px entre íconos y texto */
+}
+
+/* 
+  Efecto hover para los enlaces en la lista.
+  Cambia el color del enlace al pasar el ratón.
+*/
+.lk li a:hover {
+    color: white; /* El color del enlace cambia a blanco en hover */
+}
+
+/* 
+  Estilos para los íconos (<i>) dentro de los elementos de la lista.
+  Se define su tamaño y color, con una transición para el hover.
+*/
+.lk li i {
+    font-size: 1.6rem; /* Tamaño de fuente de 1.6rem para los íconos */
+    color: #d8b2ff; /* Color morado claro para los íconos */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* 
+  Efecto hover para los íconos.
+  Cambia el color del ícono al pasar el ratón.
+*/
+.lk li i:hover {
+    color: white; /* El color del ícono cambia a blanco en hover */
+}
+
+/* 
+  Estilos para la sección de derechos reservados en el footer.
+  Se centra el texto, define tamaño y color, y le aplica un fondo.
+*/
+.certificado {
+    text-align: center; /* Centra el texto */
+    font-size: 1rem; /* Tamaño de fuente de 1rem */
+    padding: 15px 0; /* Padding vertical de 15px */
+    color: white; /* Color del texto en blanco */
+    background: #4b0082; /* Fondo en color morado oscuro */
+    width: 100%; /* Ocupa el 100% del ancho */
+    margin-top: 20px; /* Margen superior de 20px para separarlo de los demás contenidos */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* 
+  Media query para dispositivos con un ancho máximo de 600px.
+  Ajusta el layout del artículo dentro del footer para que se muestre en una sola columna.
+*/
+@media (max-width: 600px) {
+    .footer article {
+        grid-template-columns: 1fr; /* Todas las columnas se apilan en una sola columna */
+    }
+}
+
+
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+/*                                                                                */
+/*                                                                                */
+/*                    KFRAMES KFRAMES KFRAMES KFRAMES KFRAMES                     */
+/*                                                                                */
+/*                                                                                */
+/*# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
+
+
+/* 
+  Animación "desplazamiento" para mover un elemento horizontalmente.
+  Se espera desplazar el elemento desde su posición inicial hasta el final,
+  recorriendo el 100% del ancho de 5 elementos (por ejemplo, para un carrusel de 5 slides).
+*/
+@keyframes desplazamiento {
+    0% {
+        transform: translateX(0); /* En el inicio, el elemento está en su posición original */
+    }
+    100% {
+        transform: translateX(calc(-100% * 5)); /* Al final, se desplaza hacia la izquierda el ancho de 5 elementos */
+    }
+}
+
+/* 
+  Animación "aparecerDesdeDerecha" para hacer que un elemento entre en pantalla desplazándose desde la derecha.
+*/
+@keyframes aparecerDesdeDerecha {
+    0% {
+        transform: translateX(100px); /* Inicia 100px fuera de la pantalla hacia la derecha */
+        opacity: 0; /* Comienza completamente transparente */
+    }
+    100% {
+        transform: translateX(0); /* Termina en su posición original */
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+
+/* 
+  Animación "aparecerDesdeAbajo" para hacer que un elemento aparezca desplazándose desde abajo.
+*/
+@keyframes aparecerDesdeAbajo {
+    0% {
+        transform: translateY(100px); /* Inicia 100px por debajo de su posición final */
+        opacity: 0; /* Comienza transparente */
+    }
+    100% {
+        transform: translateY(0); /* Termina en su posición final */
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+
+/* 
+  Animación "aparecerDesdeIzquierda" para hacer que un elemento aparezca desplazándose desde la izquierda.
+*/
+@keyframes aparecerDesdeIzquierda {
+    0% {
+        transform: translateX(-100px); /* Inicia 100px a la izquierda de su posición final */
+        opacity: 0; /* Comienza invisible */
+    }
+    100% {
+        transform: translateX(0); /* Termina en su posición final */
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+

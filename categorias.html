@@ -1,0 +1,114 @@
+<html lang="es">
+<head>
+    <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura la vista para dispositivos móviles, adaptando el ancho de la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>GORRAS</title>
+    <!-- Vincula el archivo CSS externo "ropa.css" para los estilos -->
+    <link rel="stylesheet" href="css/categorias.css">
+</head>
+
+<body class="grid-container">
+    <!-- El body utiliza la clase "grid-container" para el layout general -->
+
+    <!-- HEADER: Encabezado de la página -->
+    <header class="header">
+        <!-- Contenedor del logo -->
+        <div class="logo">
+            <!-- Imagen del logo, se muestra en blanco -->
+            <a href="index.html"><img src="css/img/LOGOTIPO_BLANCO.png" alt="Mi Logo"></a>
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú hamburguesa en dispositivos móviles -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Etiqueta que actúa como botón para el menú hamburguesa -->
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <!-- Menú de navegación principal -->
+        <nav class="navbar">
+            <!-- Enlace a la página de inicio -->
+            <a href="index.html">INICIO</a>
+            <!-- Enlace a la página de gorras -->
+            <a href="categorias.html">GORRAS</a>
+            <!-- Enlace a la página de ropa -->
+            <a href="ropa.html">ROPA</a>
+            <!-- Enlace a la sección de contacto dentro de la misma página -->
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- MAIN: Contenido principal de la página -->
+    <div class="main">
+        <h1>Nuestros Productos</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="css/img/GORRA ESTILO 1.png" alt="Gorra Snapback">
+                <h2>Gorra Snapback</h2>
+                <p>Un diseño moderno y ajustable con visera plana, ideal para cualquier ocasión.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="css/img/GORRA ESTILO 2.png" alt="Gorra Trucker">
+                <h2>Gorra Trucker</h2>
+                <p>Ligera y transpirable con malla trasera, perfecta para el día a día.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="css/img/GORRA ESTILO 3.png" alt="Gorra Dad Hat">
+                <h2>Gorra Dad Hat</h2>
+                <p>Un estilo clásico de ajuste cómodo que combina con cualquier outfit.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="css/img/GORRA ESTILO 4.png" alt="Gorra Deportiva">
+                <h2>Gorra Deportiva</h2>
+                <p>Diseñada con materiales ligeros y transpirables para mayor comodidad.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER: Pie de página -->
+    <footer id="contacto" class="footer">
+        <!-- Contenedor de artículos dentro del footer -->
+        <article>
+            <!-- Primer bloque del footer -->
+            <div class="box">
+                <!-- Título o nombre de la marca -->
+                <h1>TECHOS STYLE</h1>
+                <!-- Descripción o "acerca de" la marca -->
+                <div class="acerca">
+                    "Gorras con diseños exclusivos y de calidad, ideales para los que buscan comodidad y estilo en su día a día. Perfectas para el público amateur que quiere lucir bien sin perder la funcionalidad."
+                </div>
+            </div>
+            <!-- Segundo bloque del footer con enlaces de acceso -->
+            <div class="box">
+                <!-- Título del bloque -->
+                <h1 class="links">links de Acceso</h1>
+                <!-- Lista de enlaces -->
+                <ul class="lk">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#gorras">Gorras</a></li>
+                    <li><a href="./formulario.html">Contactanos</a></li>
+                </ul>
+            </div>
+            <!-- Tercer bloque del footer con redes sociales -->
+            <div class="box">
+                <!-- Título del bloque -->
+                <h1 class="links">Redes Sociales</h1>
+                <!-- Lista de redes sociales -->
+                <ul class="lk">
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+                    <li><a href="https://whatsapp.com">Whatsapp</a></li>
+                </ul>
+            </div>         
+        </article>
+        <!-- Mensaje de derechos de autor -->
+        <p class="certificado">Todo Derecho Reservado al copyrigth 2025 - TECHOS STLYLE</p>
+    </footer>
+</body>
+</html>
