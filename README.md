@@ -41,10 +41,20 @@
 ### 📊 SYSTEM_METRICS
 
 <div align="center">
-  <img src="https://github.com/aledelling/aledelling/blob/main/github-metrics.svg?raw=true" width="100%" alt="Metrics Dashboard" />
+  <!-- Trofeos de GitHub (Muestra logros automáticamente) -->
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=aledelling&theme=gitdimmed&no-frame=true&no-bg=true&margin-w=4" width="100%" />
+  </a>
+  
+  <br/><br/>
+
+  <!-- Stats Clásicas pero con tema Cyberpunk (Dracula) -->
+  <a href="https://github.com/aledelling">
+  <img src="https://github-readme-stats.vercel.app/api?username=aledelling&show_icons=true&theme=dracula&hide_border=true&count_private=true" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aledelling&layout=compact&theme=dracula&hide_border=true&langs_count=6" height="160" />
+  </a>
 </div>
 
-<br/>
 
 ### 💾 DEPLOYED_PROJECTS
 
