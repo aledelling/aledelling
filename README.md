@@ -52,14 +52,6 @@
   
   <br/><br/>
 
-  <!-- Stats -->
-  <a href="https://github.com/aledelling">
-    <img src="https://github-readme-stats.vercel.app/api?username=aledelling&show_icons=true&theme=dracula&hide_border=true&count_private=true" height="160" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aledelling&layout=compact&theme=dracula&hide_border=true&langs_count=6" height="160" />
-  </a>
-
-  <br/><br/>
-
   <!-- SECCIÓN DE PROYECTOS -->
   <h3>💾 DEPLOYED_PROJECTS</h3>
 
