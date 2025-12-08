@@ -1,93 +1,74 @@
 <div align="center">
-
-  <!-- BANNER PRINCIPAL: Ciberseguridad / Dev -->
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" style="border-radius: 10px;" alt="Cyberpunk Banner" />
-
-  <h1 align="center">Hi there, I'm J. Alejandro Diaz 👋</h1>
-  <h3 align="center">Backend Developer & Cybersecurity Enthusiast</h3>
-
-  <p align="center"> 
-    Software Developer from Bogotá, Colombia 🇨🇴. <br/>
-    Passionate about building scalable back-end systems and secure architectures.
-  </p>
-
-  <p align="center">
-    <!-- REDES SOCIALES -->
-    <a href="https://linkedin.com/in/alejandro-diaz-dev" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-    </a>
-    <a href="mailto:tu-email@ejemplo.com">
-      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-    </a>
-  </p>
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="180px" style="object-fit:cover; border-radius: 6px; border: 1px solid #333;" alt="Cyberpunk Header" />
 </div>
 
-<br/>
+<h1 align="center" style="font-family: monospace;">SYSTEM.USER: <span style="color: #bc13fe;">J. ALEJANDRO DIAZ</span>_</h1>
 
-### 👨‍💻 About Me
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="left">🚀 /sys/bio_</h3>
+      <p>
+        > <b>Role:</b> Backend Developer <br>
+        > <b>Location:</b> Bogotá, CO 🇨🇴 <br>
+        > <b>Focus:</b> Scalable Systems & SecOps <br>
+        > <b>Status:</b> Building <a href="https://github.com/aledelling/sgie-mvp"><b>@SGIE-MVP</b></a>
+      </p>
+      
+      <h3 align="left">🛠 /bin/stack_</h3>
+      <p>
+        <img src="https://img.shields.io/badge/Java-000?style=flat-square&logo=java&logoColor=ED8B00&color=1a1a1a" />
+        <img src="https://img.shields.io/badge/Python-000?style=flat-square&logo=python&logoColor=3776AB&color=1a1a1a" />
+        <img src="https://img.shields.io/badge/TS-000?style=flat-square&logo=typescript&logoColor=3178C6&color=1a1a1a" />
+        <br>
+        <img src="https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white&color=1a1a1a" />
+        <img src="https://img.shields.io/badge/Supabase-000?style=flat-square&logo=supabase&logoColor=3ECF8E&color=1a1a1a" />
+        <img src="https://img.shields.io/badge/Linux-000?style=flat-square&logo=linux&logoColor=FCC624&color=1a1a1a" />
+      </p>
 
-- 🔭 I’m currently working on **[SGIE-MVP](https://github.com/aledelling/sgie-mvp)** (Employee Management System).
-- 🌱 I’m currently learning **Advanced Cybersecurity & Ethical Hacking**.
-- 💼 I specialize in **Java, Python, and JavaScript** ecosystems.
-- ⚡ Fun fact: I'm an early riser (4:30 AM club) ☕ and love motorcycle mechanics 🏍️.
+      <h3 align="left">📡 /net/connect_</h3>
+      <p>
+        <a href="https://linkedin.com/in/alejandro-diaz-dev">
+          <img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="25" />
+        </a>
+        <a href="mailto:alediazj@example.com">
+          <img src="https://img.shields.io/badge/MAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="25" />
+        </a>
+      </p>
+    </td>
 
-<br/>
+    <td width="50%" valign="top">
+       <h3 align="center">📊 /var/stats_</h3>
+       <div align="center">
+         <a href="https://github.com/aledelling">
+           <img src="https://github-readme-stats.vercel.app/api?username=aledelling&show_icons=true&theme=synthwave&hide_border=true&count_private=true&bg_color=0d1117&hide_title=true" width="100%" />
+         </a>
+         <br>
+         <a href="https://github.com/aledelling">
+           <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aledelling&layout=compact&theme=synthwave&hide_border=true&bg_color=0d1117&langs_count=6&hide_title=true" width="100%" />
+         </a>
+       </div>
+    </td>
+  </tr>
+</table>
 
-### 🛠️ Tech Stack
+<br>
 
 <div align="center">
-  <!-- Backend & Languages -->
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-  <br/>
-  <!-- Frameworks -->
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
-  <br/>
-  <!-- Database & Tools -->
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=aledelling&theme=synthwave&hide_border=true&background=0d1117&ring=bc13fe&fire=bc13fe&currStreakLabel=bc13fe" width="90%" alt="streak" />
 </div>
 
-<br/>
+<br>
 
-### 📊 GitHub Stats
+<h3 align="center">💾 /opt/projects_</h3>
 
-<div align="center">
-  <!-- ESTADÍSTICAS SIMPLIFICADAS PARA EVITAR ERRORES -->
-  <!-- Usamos layout=compact para que cargue más rápido -->
-  <a href="https://github.com/aledelling">
-    <img src="https://github-readme-stats.vercel.app/api?username=aledelling&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150" alt="stats" />
-  </a>
-  <a href="https://github.com/aledelling">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aledelling&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" height="150" alt="languages" />
-  </a>
-</div>
-
-<br/>
-
-<div align="center">
-  <!-- Streak Stats suele ser más estable -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=aledelling&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</div>
-
-<br/>
-
-### 🏆 Featured Projects
-
-| Project | Description | Stack |
+| ID | PROJECT | STACK |
 | :--- | :--- | :--- |
-| **[SGIE-MVP](https://github.com/aledelling/sgie-mvp)** | Full-stack HR management system with role-based access. | `Next.js` `Supabase` `Tailwind` |
-| **[GestorTaller](https://github.com/aledelling/GestorTaller)** | Management software for motorcycle workshops. | `Java` `SQL` |
-| **[TechShop](https://github.com/aledelling/TechShop)** | E-commerce platform specialized in developer gear. | `HTML` `CSS` `JS` |
+| `01` | **[SGIE-MVP](https://github.com/aledelling/sgie-mvp)** | `Next.js` `Supabase` `Tailwind` |
+| `02` | **[GestorTaller](https://github.com/aledelling/GestorTaller)** | `Java` `SQL` `Swing` |
+| `03` | **[TechShop](https://github.com/aledelling/TechShop)** | `HTML5` `CSS3` `JS` |
 
-<br/>
-
+<br>
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=aledelling&style=flat-square&color=blueviolet&label=Profile+Views" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=aledelling&style=plastic&color=bc13fe&label=VISITORS" alt="Profile views" />
 </div>
