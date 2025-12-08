@@ -77,7 +77,7 @@
         <tr>
             <td align="center"><code>01</code></td>
             <td align="left">
-                **[SGIE-MVP](https://github.com/aledelling/sgie-mvp)**<br>
+                [SGIE-MVP]<br>
                 Sistema de Gestión Integral
             </td>
             <td align="center">
@@ -89,7 +89,7 @@
         <tr>
             <td align="center"><code>02</code></td>
             <td align="left">
-                **[GestorTaller](https://github.com/aledelling/GestorTaller)**<br>
+                [GestorTaller]<br>
                 Software administrativo
             </td>
             <td align="center">
@@ -101,7 +101,7 @@
         <tr>
             <td align="center"><code>03</code></td>
             <td align="left">
-                **[TechShop](https://github.com/aledelling/TechShop)**<br>
+                [TechShop]<br>
                 E-commerce developer
             </td>
             <td align="center">
