@@ -4,13 +4,13 @@
   <br/>
   
   <h1 style="border-bottom: none; margin-bottom: 0;">
-    <samp>&gt; SYSTEM.INIT: <span style="color:#bc13fe">J. ALEJANDRO</span>_</samp>
+    <samp>&gt; HELLO_WORLD <span style="color:#bc13fe">I'M ALEJANDRO</span></samp>
   </h1>
   <p style="margin-top: 0;">
     <code>Backend Dev</code> • <code>Security Research</code> • <code>Bogotá, CO</code>
   </p>
 
-  <!-- BLOQUE COMPACTO: CONTACTO + ARSENAL EN LA MISMA LÍNEA VISUAL -->
+  <!-- BLOQUE COMPACTO: CONTACTO + ARSENAL -->
   <table border="0">
     <tr>
       <td align="center" style="border: none;">
@@ -22,7 +22,7 @@
           <img src="https://img.shields.io/badge/EMAIL-D14836?style=flat-square&logo=gmail&logoColor=white"/>
         </a>
       </td>
-      <td align="center" width="20" style="border: none;"> | </td>
+      <td align="center" width="20" style="border: none;"> <span style="font-size: 20px; color: #333;">|</span> </td>
       <td align="center" style="border: none;">
         <b>ARSENAL_</b><br><br>
         <img src="https://img.shields.io/badge/Java-1a1a1a?style=flat-square&logo=java&logoColor=ED8B00"/>
@@ -41,7 +41,6 @@
 ### 📊 SYSTEM_METRICS
 
 <div align="center">
-  <!-- Asegúrate que la ruta sea correcta (main o master) -->
   <img src="https://github.com/aledelling/aledelling/blob/main/github-metrics.svg?raw=true" width="100%" alt="Metrics Dashboard" />
 </div>
 
@@ -53,7 +52,7 @@
 | :--- | :--- | :--- | :--- |
 | `01` | **[SGIE-MVP](https://github.com/aledelling/sgie-mvp)** <br> Sistema de Gestión Integral de Empleados | ![Next JS](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white) | `Fullstack` |
 | `02` | **[GestorTaller](https://github.com/aledelling/GestorTaller)** <br> Software administrativo para mecánica | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white) ![SQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) | `Desktop` |
-| `03` | **[TechShop](https://github.com/aledelling/TechShop)** <br> E-commerce para perifericos | ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | `Web` |
+| `03` | **[TechShop](https://github.com/aledelling/TechShop)** <br> E-commerce para periféricos | ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | `Web` |
 
 <br>
 <div align="center">
