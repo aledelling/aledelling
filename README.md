@@ -21,9 +21,6 @@
         <a href="https://linkedin.com/in/alejandro-diaz-dev">
           <img src="https://img.shields.io/badge/LINKEDIN-0077B5?style=flat-square&logo=linkedin&logoColor=white"/>
         </a><br>
-        <a href="mailto:alediazj@example.com">
-          <img src="https://img.shields.io/badge/PGP_ENCRYPTED-D14836?style=flat-square&logo=gmail&logoColor=white"/>
-        </a><br>
         <a href="https://github.com/aledelling">
           <img src="https://img.shields.io/badge/GITHUB-1a1a1a?style=flat-square&logo=github&logoColor=white"/>
         </a>
