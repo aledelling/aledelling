@@ -71,16 +71,6 @@ $ echo $CURRENT_FOCUS
 
   <br/>
 
-  <!-- SECCIÓN DE MÉTRICAS -->
-  <h3><span style="color:#00ff41">📊 SYSTEM_DIAGNOSTICS</span></h3>
-  
-  <!-- Trofeos -->
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=aledelling&theme=darkhub&no-frame=true&no-bg=true&margin-w=4" />
-  </a>
-  
-  <br/><br/>
-
   <!-- ACTIVIDAD DE CONTRIBUCIÓN -->
   <h3><span style="color:#00ff41">🔥 NETWORK_TRAFFIC</span></h3>
   
