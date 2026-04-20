@@ -44,46 +44,6 @@
   
   <br/>
 
-  <!-- TERMINAL STYLE INFO - MATRIX EDITION -->
-  <div align="left" style="background: linear-gradient(180deg, #0a0e14 0%, #0d1117 100%); padding: 20px; border-radius: 8px; border: 1px solid #00ff41; box-shadow: 0 0 20px rgba(0, 255, 65, 0.3); font-family: 'Courier New', monospace; max-width: 750px; margin: 0 auto;">
-    <pre style="margin: 0; color: #00ff41; text-shadow: 0 0 5px #00ff41;">
-<span style="color:#00ff41">┌──────────────────────────────────────────────────────────────┐</span>
-<span style="color:#00ff41">│</span>  <span style="color:#ffffff">WAKE_UP_NEO..._THE_MATRIX_HAS_YOU</span>                      <span style="color:#00ff41">│</span>
-<span style="color:#00ff41">└──────────────────────────────────────────────────────────────┘</span>
-
-$ <span style="color:#ffffff">cat /dev/identity</span>
-  <span style="color:#ffd700">▓▒░</span> Backend Developer specialized in Cybersecurity
-  <span style="color:#ffd700">▓▒░</span> Architect of secure systems | Breaker of vulnerable ones
-  <span style="color:#ffd700">▓▒░</span> Operating in the shadows between code and chaos
-
-$ <span style="color:#ffffff">./analyze_skills.sh --verbose</span>
-  <span style="color:#00ffff">[LOADING]</span> Core languages...
-    ├── Java ☠️ (Enterprise warfare)
-    ├── Python 🐍 (Automation & exploits)
-    ├── Rust 🦀 (Memory-safe weaponry)
-    ├── TypeScript ⚡ (Full-stack ops)
-    └── Bash 💀 (System manipulation)
-
-  <span style="color:#ff00ff">[LOADING]</span> Security protocols...
-    ├── OWASP Top 10 ████████████ 100%
-    ├── SAST/DAST ████████████ 100%
-    ├── Threat Modeling ██████████ 95%
-    ├── Cryptography ████████████ 100%
-    └── Reverse Engineering ████████ 85%
-
-  <span style="color:#ffff00">[LOADING]</span> Arsenal deployed...
-    ├── Burp Suite │ Metasploit │ Nmap
-    ├── Wireshark │ Ghidra │ John the Ripper
-    └── SQLMap │ Hydra │ Aircrack-ng
-
-$ <span style="color:#ffffff">echo $MISSION_STATEMENT</span>
-  <span style="color:#ffd700">"In a world of black boxes, be the white hat."</span>
-  <span style="color:#ffd700">"Every vulnerability tells a story. I write the ending."</span>
-    </pre>
-  </div>
-
-  <br/>
-
   <!-- SECCIÓN DE PROYECTOS -->
   <h3><span style="color:#00ff41">💾 DEPLOYED_OPERATIONS</span></h3>
 
@@ -167,21 +127,5 @@ $ <span style="color:#ffffff">echo $MISSION_STATEMENT</span>
   </table>
 
   <br/>
-  
-  <!-- MATRIX FOOTER -->
-  <div align="center" style="background: linear-gradient(180deg, #0d1117 0%, #0a0e14 100%); padding: 15px; border-radius: 8px; border: 1px solid #00ff41; box-shadow: 0 0 15px rgba(0, 255, 65, 0.2); font-family: 'Courier New', monospace;">
-    <pre style="margin: 0; color: #00ff41; text-shadow: 0 0 3px #00ff41;">
-<span style="color:#00ff41">╔══════════════════════════════════════════════════════╗</span>
-<span style="color:#00ff41">║</span>  <span style="color:#ffffff">FOLLOW_THE_WHITE_RABBIT</span>                           <span style="color:#00ff41">║</span>
-<span style="color:#00ff41">║</span>                                                      <span style="color:#00ff41">║</span>
-<span style="color:#00ff41">║</span>  <span style="color:#ffd700">gh aledelling</span>  │  <span style="color:#ffd700">in alejandro-diaz-dev</span>           <span style="color:#00ff41">║</span>
-<span style="color:#00ff41">╚══════════════════════════════════════════════════════╝</span>
-
-    <span style="color:#00ff41">// Security is not a feature. It's the foundation.</span>
-    </pre>
-  </div>
-  
-  <br/>
-  <samp><span style="color:#00ff41">EOF_</span></samp>
 
 </div>
